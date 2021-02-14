@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 import postStyles from '../../styles/Post.module.scss';
+import { Toolbar } from '../../components/toolbar';
 
 export const Post = ({ title, body, image }) => {
   const [imageUrl, setImageUrl] = useState('');
@@ -17,6 +18,7 @@ export const Post = ({ title, body, image }) => {
 
   return (
     <div>
+      <Toolbar />
       <div className={postStyles.main}>
         <h2>{title}</h2>
 
